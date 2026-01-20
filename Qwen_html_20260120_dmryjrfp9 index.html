@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carpintería Artesanal | Diseña tu Mueble</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Carpintería Artesanal</h1>
+    <p>Transformamos tus ideas en madera real</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>¿Tienes una idea en mente?</h2>
+      <p>Envíanos una foto de lo que deseas, y nosotros lo construimos y enviamos a tu domicilio.</p>
+
+      <!-- Formulario usando Formspree -->
+      <form action="https://formspree.io/f/tu-form-id" method="POST" enctype="multipart/form-data" id="carpinteriaForm">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="telefono">Teléfono (opcional):</label>
+        <input type="tel" id="telefono" name="telefono" />
+
+        <label for="ubicacion">Ubicación (ciudad o dirección):</label>
+        <input type="text" id="ubicacion" name="ubicacion" required />
+
+        <label for="foto">Foto de tu diseño o idea:</label>
+        <input type="file" id="foto" name="foto" accept="image/*" required />
+
+        <label for="mensaje">Mensaje adicional (opcional):</label>
+        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+        <button type="submit">Enviar Solicitud</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Carpintería Artesanal. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Validación básica de archivo
+    document.getElementById('carpinteriaForm').addEventListener('submit', function(e) {
+      const fileInput = document.getElementById('foto');
+      const file = fileInput.files[0];
+      
+      if (file && file.size > 5 * 1024 * 1024) { // 5 MB
+        alert('La imagen no debe superar los 5 MB.');
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>
