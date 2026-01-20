@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f3e9;
+  color: #4a3c30;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #8b5a2b;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.form-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-section h2 {
+  margin-bottom: 1rem;
+  color: #8b5a2b;
+}
+
+.form-section p {
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #8b5a2b;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #6b4521;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #e8d9c9;
+  color: #5a4a3f;
+  margin-top: 3rem;
+}
